@@ -18,31 +18,62 @@
       <p>Fun way to draw awesome statistics from boring letters</p>
     </header>
     <main>
-        <div class = "fontSelector">
-            <div id="box-container">
-                <div class="fontBox box1">
-                <button></button>
-                </div>
-                <div class="fontBox box2">
-                <button></button>
-                </div>
-                <div class="fontBox box3">
-                <button></button>
-                </div>
-                <div class="fontBox box4">
-                <button></button>
-                </div>
-                <div class="fontBox boxRandom">
-                <button></button>
-                </div>
-            </div>
+      <div class="fontSelector">
+        <div id="box-container">
+          <div class="fontBox box1">
+            <button>Font 1</button>
+          </div>
+          <div class="fontBox box2">
+            <button>Font 2</button>
+          </div>
+          <div class="fontBox box3">
+            <button>Random Color</button>
+          </div>
+          <div class="fontBox box4">
+            <button>Large</button>
+          </div>
+          <div class="fontBox boxRandom">
+            <button>Small</button>
+          </div>
+        </div>
+      </div>
       <div class="textContainer">
-        <form>
+        <div id="textBox">
           <p>Start typing and check out awesome tools</p>
-          <textarea class="entry" placeholder="Enter your text..."></textarea>
-          <br />
-          <input type="submit" name="submitInfo" value="Execute" />
-        </form>
+          <textarea
+            class="entry"
+            placeholder="Enter your text..."
+            rows="10"
+          ></textarea>
+          <!-- <form>
+                <input type="submit" name="submitInfo" value="Execute" />
+                </form> -->
+        </div>
+        <div class="info-counters">
+          <ul>
+            <li id="result-characters">
+              <strong>Characters</strong>
+              <div id="result-characters-num">0</div>
+            </li>
+            <li id="result-words">
+              <strong>Words</strong>
+              <div id="result-words-num">0</div>
+            </li>
+            <li id="result-sentences">
+              <strong>Sentences</strong>
+              <div id="result-sentences-num">0</div>
+            </li>
+            <li id="result-paragraphs">
+              <strong>Paragraphs</strong>
+              <div id="result-paragraphs-num">0</div>
+            </li>
+            <li id="result-spaces">
+              <strong>Space</strong>
+              <div id="result-spaces-num">0</div>
+            </li>
+          </ul>
+          <div class="adUnit"></div>
+        </div>
       </div>
     </main>
     <footer></footer>

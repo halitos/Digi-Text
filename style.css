@@ -16,8 +16,8 @@ body {
 #box-container {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .fontBox {
@@ -27,4 +27,16 @@ body {
 button {
   width: 100px;
   height: 60px;
+}
+
+.info-counters ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background: #2f69a5;
+  color: white;
+}
+
+.info-counters ul li {
+  margin: 20px;
 }
