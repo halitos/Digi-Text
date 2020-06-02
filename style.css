@@ -1,0 +1,30 @@
+body {
+  text-align: center;
+  margin: 10px;
+}
+
+.entry {
+  width: 60%;
+  height: 100px;
+  padding: 10px;
+  outline: 0;
+  border: 3px solid #1c87c9;
+  background: #d0e2bc;
+  line-height: 20px;
+}
+
+#box-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.fontBox {
+  margin: 20px;
+}
+
+button {
+  width: 100px;
+  height: 60px;
+}
