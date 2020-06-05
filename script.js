@@ -5,7 +5,7 @@ const fontBtn = document.querySelector(
 const textArea = document.querySelector(".entry");
 
 function lrgFont() {
-  textArea.style.fontSize = "2em";
+  textArea.style.fontSize = "1.5em";
 }
 
 fontBtn.addEventListener("click", lrgFont);
