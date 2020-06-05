@@ -3,6 +3,11 @@ body {
   margin: 10px;
 }
 
+header {
+  background-color: #b1e0ed;
+  padding: 30px;
+}
+
 .entry {
   width: 60%;
   height: 100px;
@@ -20,6 +25,10 @@ body {
   margin-bottom: 20px;
 }
 
+.textContainer {
+  text-align: center;
+}
+
 .fontBox {
   margin: 20px;
 }
@@ -29,9 +38,14 @@ button {
   height: 60px;
 }
 
+.info-counters {
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
 .info-counters ul {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   list-style: none;
   background: #2f69a5;
   color: white;

@@ -14,40 +14,42 @@
   </head>
   <body>
     <header>
-      <h1>Count on your words!</h1>
-      <p>Fun way to create awesome statistics from boring letters</p>
+      <h1 class="display-3">Count on your words!</h1>
+      <h3 class="lead">
+        Fun way to create awesome statistics from boring letters
+      </h3>
     </header>
     <main>
       <div class="fontSelector">
         <div id="box-container">
           <div class="fontBox box1">
-            <button>Font 1</button>
+            <button type="button" class="btn btn-info">Font1</button>
           </div>
           <div class="fontBox box2">
-            <button>Font 2</button>
+            <button type="button" class="btn btn-info">Font2</button>
           </div>
           <div class="fontBox box3">
-            <button>Random Color</button>
+            <button type="button" class="btn btn-success">Color</button>
           </div>
           <div class="fontBox box4">
-            <button>Large</button>
+            <button type="button" class="btn btn-primary">A</button>
           </div>
           <div class="fontBox boxRandom">
-            <button>Small</button>
+            <button type="button" class="btn btn-primary">a</button>
           </div>
         </div>
       </div>
       <div class="textContainer">
         <div id="textBox">
-          <p>Start typing and check out cool tools</p>
+          <h5>Start typing and check out cool tools</h5>
           <textarea
             class="entry"
             placeholder="Enter your text..."
             rows="10"
           ></textarea>
           <!-- <form>
-                <input type="submit" name="submitInfo" value="Execute" />
-                </form> -->
+            <input type="submit" name="submitInfo" value="Execute" />
+          </form> -->
         </div>
         <div class="info-counters">
           <ul>
@@ -58,14 +60,6 @@
             <li id="result-words">
               <strong>Words</strong>
               <div id="result-words-num">0</div>
-            </li>
-            <li id="result-sentences">
-              <strong>Sentences</strong>
-              <div id="result-sentences-num">0</div>
-            </li>
-            <li id="result-paragraphs">
-              <strong>Paragraphs</strong>
-              <div id="result-paragraphs-num">0</div>
             </li>
             <li id="result-spaces">
               <strong>Space</strong>
