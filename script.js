@@ -35,3 +35,24 @@ function buttonColors() {
 }
 
 colorBtn.addEventListener("click", buttonColors);
+
+//------------------counter--------------------
+
+let counter = document.getElementById("result-characters-num");
+
+function textCounter() {
+  counter.innerHTML = textArea.value.length;
+  if (textArea.value.includes("bug")) {
+    alert("naughty!");
+  }
+}
+
+textArea.addEventListener("keyup", textCounter);
+
+let counter2 = document.getElementById("result-words-num");
+
+function wordCounter() {
+  counter2.innerHTML = textArea.value.split(" ").length;
+}
+
+textArea.addEventListener("keyup", wordCounter);
