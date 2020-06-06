@@ -17,7 +17,7 @@ main {
 }
 
 .main-container {
-  width: 60%;
+  width: 80%;
   background-color: aliceblue;
 }
 
@@ -30,10 +30,10 @@ main {
   line-height: 20px;
 }
 
-#box-container {
+#button-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 20px;
 }
 
 .fontBox {
@@ -42,12 +42,11 @@ main {
 
 button {
   width: 100px;
-  height: 60px;
 }
 
 .info-counters ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   list-style: none;
   background: #2f69a5;
   color: white;
