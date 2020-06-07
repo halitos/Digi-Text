@@ -88,3 +88,11 @@ function spaceCounter() {
   counter3.innerHTML = textArea.value.length - trimmedText.length;
 }
 textArea.addEventListener("keyup", spaceCounter);
+
+//-------------------------------Paste----------------------------------------
+
+textArea.addEventListener("paste", alertPaste);
+
+function alertPaste() {
+  alert("Please continue typing to see the value of pasted text");
+}
