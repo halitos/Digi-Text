@@ -19,7 +19,7 @@ function SmlFont() {
 
 SmallFontBtn.addEventListener("click", SmlFont);
 
-//--------------------Font Color--------------------
+//--------------------Random Font Color--------------------
 
 const colorBtn = document.getElementById("fontColor");
 
@@ -36,23 +36,55 @@ function buttonColors() {
 
 colorBtn.addEventListener("click", buttonColors);
 
-//------------------counter--------------------
+//-------------------Dark/Light Themes-----------------
 
-let counter = document.getElementById("result-characters-num");
+const darkButton = document.getElementById("darkTheme");
+
+function makeDark() {
+  textArea.style.backgroundColor = "black";
+  textArea.style.color = "white";
+}
+
+darkButton.addEventListener("click", makeDark);
+
+const lightButtton = document.getElementById("lightTheme");
+function makeLight() {
+  textArea.style.backgroundColor = "white";
+  textArea.style.color = "black";
+}
+lightButtton.addEventListener("click", makeLight);
+
+//------------------Character counter--------------------
+
+const counter = document.getElementById("result-characters-num");
+
+const badWords = ["bug", "nested", "algorithm", "fouc", "error"];
 
 function textCounter() {
   counter.innerHTML = textArea.value.length;
-  if (textArea.value.includes("bug")) {
-    alert("naughty!");
-  }
+  badWords.forEach(function (word) {
+    if (textArea.value.includes(word)) {
+      alert("NOOO!!!");
+    }
+  });
 }
-
 textArea.addEventListener("keyup", textCounter);
+
+//---------------------Word counter---------------------
 
 let counter2 = document.getElementById("result-words-num");
 
 function wordCounter() {
   counter2.innerHTML = textArea.value.split(" ").length;
 }
-
 textArea.addEventListener("keyup", wordCounter);
+
+//--------------------Space counter (need to sort out)-----------------------
+
+let counter3 = document.getElementById("result-spaces-num");
+
+function spaceCounter() {
+  let trimmedText = textArea.value.trim();
+  counter3.innerHTML = textArea.value.length - trimmedText.length;
+}
+textArea.addEventListener("keyup", spaceCounter);
