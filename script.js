@@ -84,8 +84,8 @@ textArea.addEventListener("keyup", wordCounter);
 let counter3 = document.getElementById("result-spaces-num");
 
 function spaceCounter() {
-  let trimmedText = textArea.value.trim();
-  counter3.innerHTML = textArea.value.length - trimmedText.length;
+  let regexp = /\s/g;
+  counter3.innerText = textArea.value.match(regexp).length;
 }
 textArea.addEventListener("keyup", spaceCounter);
 
