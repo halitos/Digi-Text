@@ -1,14 +1,11 @@
 // ---------------Larger Font ---------------
 
-const textArea = document.querySelector(".entry");
-const LargeFontBtn = document.querySelector("#largeFont");
+// const textArea = $(".entry");
+$("#largeFont").on("click", function () {
+  $(".entry").css("fontSize", "1.5em");
+});
 
-function lrgFont() {
-  textArea.style.fontSize = "1.5em";
-}
-
-LargeFontBtn.addEventListener("click", lrgFont);
-
+/*
 //--------------------Smaller Font---------------
 
 const SmallFontBtn = document.querySelector("#smallFont");
@@ -79,7 +76,7 @@ function wordCounter() {
 }
 textArea.addEventListener("keyup", wordCounter);
 
-//--------------------Space counter (need to sort out)-----------------------
+//--------------------Space counter -----------------------
 
 let counter3 = document.getElementById("result-spaces-num");
 
@@ -96,3 +93,4 @@ textArea.addEventListener("paste", alertPaste);
 function alertPaste() {
   alert("Please continue typing to see the value of pasted text");
 }
+*/
