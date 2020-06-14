@@ -1,56 +1,43 @@
+const textArea = $(".entry");
+
 // ---------------Larger Font ---------------
 
-// const textArea = $(".entry");
 $("#largeFont").on("click", function () {
-  $(".entry").css("fontSize", "1.5em");
+  textArea.css("fontSize", "1.5em");
 });
 
-/*
 //--------------------Smaller Font---------------
 
-const SmallFontBtn = document.querySelector("#smallFont");
+$("#smallFont").on("click", SmlFont);
 
 function SmlFont() {
-  textArea.style.fontSize = "0.8em";
+  textArea.css("fontSize", "0.8em");
 }
-
-SmallFontBtn.addEventListener("click", SmlFont);
 
 //--------------------Random Font Color--------------------
 
-const colorBtn = document.getElementById("fontColor");
+$("#fontColor").on("click", changeColor);
 
-function buttonColors() {
-  textArea.style.color =
-    "rgb(" +
-    Math.floor(Math.random() * 256) +
-    "," +
-    Math.floor(Math.random() * 256) +
-    "," +
-    Math.floor(Math.random() * 256) +
-    ")";
+function changeColor() {
+  const randomColors = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  textArea.css("color", randomColors);
 }
-
-colorBtn.addEventListener("click", buttonColors);
 
 //-------------------Dark/Light Themes-----------------
 
-const darkButton = document.getElementById("darkTheme");
+$("#darkTheme").on("click", makeDark);
 
 function makeDark() {
-  textArea.style.backgroundColor = "black";
-  textArea.style.color = "white";
+  textArea.css({ backgroundColor: "black", color: "white" });
 }
 
-darkButton.addEventListener("click", makeDark);
+$("#lightTheme").on("click", makeLight);
 
-const lightButtton = document.getElementById("lightTheme");
 function makeLight() {
-  textArea.style.backgroundColor = "white";
-  textArea.style.color = "black";
+  textArea.css({ backgroundColor: "white", color: "black" });
 }
-lightButtton.addEventListener("click", makeLight);
 
+/*
 //------------------Character counter--------------------
 
 const counter = document.getElementById("result-characters-num");
