@@ -2,13 +2,13 @@ const textArea = $(".entry");
 
 // ---------------Larger Font ---------------
 
-$("#largeFont").on("click", function () {
+$("#largeFont").click(function () {
   textArea.css("fontSize", "1.5em");
 });
 
 //--------------------Smaller Font---------------
 
-$("#smallFont").on("click", SmlFont);
+$("#smallFont").click(SmlFont);
 
 function SmlFont() {
   textArea.css("fontSize", "0.8em");
@@ -37,23 +37,24 @@ function makeLight() {
   textArea.css({ backgroundColor: "white", color: "black" });
 }
 
-/*
 //------------------Character counter--------------------
 
-const counter = document.getElementById("result-characters-num");
+const counter = $("#result-characters-num");
 
 const badWords = ["bug", "nested", "algorithm", "fouc", "error"];
 
+textArea.on("keyup", textCounter);
+
 function textCounter() {
-  counter.innerHTML = textArea.value.length;
+  counter.text(`${textArea.val().length}`);
   badWords.forEach(function (word) {
-    if (textArea.value.includes(word)) {
+    if (textArea.val().includes(word)) {
       alert("NOOO!!!");
     }
   });
 }
-textArea.addEventListener("keyup", textCounter);
 
+/*
 //---------------------Word counter---------------------
 
 let counter2 = document.getElementById("result-words-num");
