@@ -54,6 +54,10 @@ function textCounter() {
   });
 }
 
+$(function () {
+  $("#dialog").dialog();
+});
+
 /*
 //---------------------Word counter---------------------
 
