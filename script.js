@@ -85,14 +85,13 @@ function alertPaste() {
 
 //-------------search function trials-------------------
 
-const searchTerm = $("#serchText").val().toLowerCase();
-
 $("#searchBtn").on("click", stringSearch);
 
 function stringSearch() {
+  const searchTerm = $("#searchText").text().toLowerCase();
   if (
     searchTerm.length > 0 &&
-    testArea.text().toLowerCase().indexOf(searchTerm) > -1
+    textArea.text().toLowerCase().indexOf(searchTerm) > -1
   ) {
     alert("String Found. Search Complete");
   } else {
