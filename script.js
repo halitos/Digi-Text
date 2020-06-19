@@ -98,3 +98,12 @@ function stringSearch() {
     alert("No Data found in Text Area");
   }
 }
+
+//---------------Pop-Up---------------------
+$(".open").on("click", function () {
+  $(".pop-outer").fadeIn("slow");
+});
+
+$(".close").on("click", function () {
+  $(".pop-outer").fadeOut("slow");
+});

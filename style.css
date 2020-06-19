@@ -57,7 +57,7 @@ button {
 }
 
 .info-counters ul li {
-  margin: 20px;
+  margin: 10px 50px;
 }
 
 #textBox button {
@@ -67,4 +67,28 @@ button {
 .search {
   display: flex;
   justify-content: space-evenly;
+}
+
+.pop-outer {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.pop-inner {
+  background-color: #fff;
+  width: 500px;
+  height: 300px;
+  padding: 20px;
+  margin: 15% auto;
+}
+
+button .close {
+  padding: 5px;
+  border: 1em;
+  border-style: solid;
 }
