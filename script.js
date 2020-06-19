@@ -100,6 +100,7 @@ function stringSearch() {
 }
 
 //---------------Pop-Up---------------------
+
 $(".open").on("click", function () {
   $(".pop-outer").fadeIn("slow");
 });
