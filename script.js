@@ -101,10 +101,10 @@ function stringSearch() {
 
 //---------------Pop-Up---------------------
 
-$(".open").on("click", function () {
+$("#about").on("click", function () {
   $(".pop-outer").fadeIn("slow");
 });
 
-$(".close").on("click", function () {
+$("#close").on("click", function () {
   $(".pop-outer").fadeOut("slow");
 });

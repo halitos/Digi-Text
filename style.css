@@ -84,11 +84,10 @@ button {
   width: 500px;
   height: 300px;
   padding: 20px;
-  margin: 15% auto;
+  margin: 10% auto;
+  border-radius: 10px;
 }
 
-button .close {
-  padding: 5px;
-  border: 1em;
-  border-style: solid;
+h2 {
+  margin: 30px;
 }
