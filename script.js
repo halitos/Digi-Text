@@ -54,35 +54,37 @@ function textCounter() {
   });
 }
 
-$(function () {
-  $("#dialog").dialog();
-});
-
-/*
 //---------------------Word counter---------------------
 
-let counter2 = document.getElementById("result-words-num");
+const counter2 = $("#result-words-num");
+
+textArea.on("keyup", wordCounter);
 
 function wordCounter() {
-  counter2.innerHTML = textArea.value.split(" ").length;
+  counter2.text(`${textArea.val().split(" ").length}`);
 }
-textArea.addEventListener("keyup", wordCounter);
 
 //--------------------Space counter -----------------------
 
-let counter3 = document.getElementById("result-spaces-num");
+let counter3 = $("#result-spaces-num");
+
+textArea.on("keyup", spaceCounter);
 
 function spaceCounter() {
   let regexp = /\s/g;
-  counter3.innerText = textArea.value.match(regexp).length;
+  counter3.text(`${textArea.val().match(regexp).length}`);
 }
-textArea.addEventListener("keyup", spaceCounter);
 
 //-------------------------------Paste----------------------------------------
 
-textArea.addEventListener("paste", alertPaste);
+textArea.on("paste", alertPaste);
 
 function alertPaste() {
   alert("Please continue typing to see the value of pasted text");
 }
-*/
+
+//-------------pop-up trials-------------------
+
+// $(function () {
+//   $("#dialog").dialog();
+// });

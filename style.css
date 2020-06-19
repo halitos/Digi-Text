@@ -63,4 +63,5 @@ button {
 #dialog {
   border-style: solid;
   border-color: black;
+  background-color: rgb(24, 60, 160);
 }
