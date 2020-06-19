@@ -46,7 +46,7 @@ const badWords = ["bug", "nested", "algorithm", "fouc", "error"];
 textArea.on("keyup", textCounter);
 
 function textCounter() {
-  counter.text(`${textArea.val().length}`);
+  counter.text(textArea.val().length);
   badWords.forEach(function (word) {
     if (textArea.val().includes(word)) {
       alert("NOOO!!!");
@@ -61,7 +61,7 @@ const counter2 = $("#result-words-num");
 textArea.on("keyup", wordCounter);
 
 function wordCounter() {
-  counter2.text(`${textArea.val().split(" ").length}`);
+  counter2.text(textArea.val().split(" ").length);
 }
 
 //--------------------Space counter -----------------------
@@ -72,7 +72,7 @@ textArea.on("keyup", spaceCounter);
 
 function spaceCounter() {
   let regexp = /\s/g;
-  counter3.text(`${textArea.val().match(regexp).length}`);
+  counter3.text(textArea.val().match(regexp).length);
 }
 
 //-------------------------------Paste----------------------------------------
@@ -83,8 +83,19 @@ function alertPaste() {
   alert("Please continue typing to see the value of pasted text");
 }
 
-//-------------pop-up trials-------------------
+//-------------search function trials-------------------
 
-// $(function () {
-//   $("#dialog").dialog();
-// });
+const searchTerm = $("#serchText").val().toLowerCase();
+
+$("#searchBtn").on("click", stringSearch);
+
+function stringSearch() {
+  if (
+    searchTerm.length > 0 &&
+    testArea.text().toLowerCase().indexOf(searchTerm) > -1
+  ) {
+    alert("String Found. Search Complete");
+  } else {
+    alert("No Data found in Text Area");
+  }
+}
