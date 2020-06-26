@@ -43,7 +43,7 @@ const counter = $("#result-characters-num");
 
 const badWords = ["bug", "nested", "algorithm", "fouc", "error"];
 
-textArea.on("keyup", textCounter);
+textArea.on("input", textCounter);
 
 function textCounter() {
   counter.text(textArea.val().length);
@@ -58,7 +58,7 @@ function textCounter() {
 
 const counter2 = $("#result-words-num");
 
-textArea.on("keyup", wordCounter);
+textArea.on("input", wordCounter);
 
 function wordCounter() {
   counter2.text(textArea.val().split(" ").length);
@@ -68,7 +68,7 @@ function wordCounter() {
 
 let counter3 = $("#result-spaces-num");
 
-textArea.on("keyup", spaceCounter);
+textArea.on("input", spaceCounter);
 
 function spaceCounter() {
   let regexp = /\s/g;
@@ -108,3 +108,13 @@ $("#about").on("click", function () {
 $("#close").on("click", function () {
   $(".pop-outer").fadeOut("slow");
 });
+
+//--------------Reset Btn---------------------
+
+const resetBtn = $("#myreset");
+
+resetBtn.on("click", resetCounters);
+
+function resetCounters() {
+  window.location.reload();
+}
