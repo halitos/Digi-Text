@@ -85,20 +85,20 @@ function alertPaste() {
 
 //-------------search function trials-------------------
 
+const searchTerm = $("#searchText").text().toLowerCase();
+
 $("#searchBtn").on("click", stringSearch);
 
-function stringSearch() {
-  const searchTerm = $("#searchText").text().toLowerCase();
-  if (
-    searchTerm.length > 0 &&
-    textArea.text().toLowerCase().indexOf(searchTerm) > -1
-  ) {
+function stringSearch(e) {
+  if (textArea.val().toLowerCase().indexOf(searchTerm) != -1) {
     alert("String Found. Search Complete");
+    e.preventDefault();
   } else {
     alert("No Data found in Text Area");
+    e.preventDefault();
   }
 }
-
+console.log(searchTerm);
 //---------------Pop-Up---------------------
 
 $("#about").on("click", function () {

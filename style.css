@@ -1,7 +1,8 @@
 body {
   text-align: center;
   padding: 10px;
-  margin: 10px;
+  margin: 0px;
+  background-color: darkgray;
 }
 
 .header {
@@ -14,6 +15,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 20px;
 }
 
 .main-container {
