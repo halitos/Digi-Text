@@ -85,20 +85,19 @@ function alertPaste() {
 
 //-------------search function trials-------------------
 
-const searchTerm = $("#searchText").text().toLowerCase();
+$("#searchBtn").click(searchText);
 
-$("#searchBtn").on("click", stringSearch);
-
-function stringSearch(e) {
+function searchText() {
+  let searchTerm = $("#searchInput").val().toLowerCase();
   if (textArea.val().toLowerCase().indexOf(searchTerm) != -1) {
     alert("String Found. Search Complete");
     e.preventDefault();
   } else {
-    alert("No Data found in Text Area");
+    alert("No such string found in Text Area");
     e.preventDefault();
   }
 }
-console.log(searchTerm);
+
 //---------------Pop-Up---------------------
 
 $("#about").on("click", function () {
