@@ -87,14 +87,18 @@ function alertPaste() {
 
 $("#searchBtn").click(searchText);
 
-function searchText() {
+function searchText(e) {
   let searchTerm = $("#searchInput").val().toLowerCase();
-  if (textArea.val().toLowerCase().indexOf(searchTerm) != -1) {
-    alert("String Found. Search Complete");
-    e.preventDefault();
+  if (searchTerm) {
+    if (textArea.val().toLowerCase().indexOf(searchTerm) != -1) {
+      alert("String Found. Search Complete");
+      e.preventDefault();
+    } else {
+      alert("No such string found in Text Area");
+      e.preventDefault();
+    }
   } else {
-    alert("No such string found in Text Area");
-    e.preventDefault();
+    alert("Please enter a character to search");
   }
 }
 
