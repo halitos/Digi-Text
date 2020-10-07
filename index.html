@@ -13,75 +13,102 @@
     <title>Digi-Text</title>
   </head>
   <body>
-    <main>
-      <div class="main-container">
-        <div class="header">
-          <h1 class="display-3">Count on your words!</h1>
-          <h3 class="lead">
-            Fun way to create awesome statistics from boring letters
-          </h3>
+    <div class="main-container">
+      <div class="header">
+        <h1 class="display-4">Count on your words!</h1>
+        <h3 class="lead">
+          Fun way to create awesome statistics from boring letters
+        </h3>
+      </div>
+      <div id="button-container">
+        <div class="fontBox box">
+          <button id="about" type="button" class="btn btn-info btn-md">
+            About
+          </button>
         </div>
-        <div id="button-container">
-          <div class="fontBox box1">
-            <button id="darkTheme" type="button" class="btn btn-info">
-              Dark
-            </button>
-          </div>
-          <div id="lightTheme" class="fontBox box2">
-            <button type="button" class="btn btn-info">Light</button>
-          </div>
-          <div class="fontBox box3">
-            <button id="fontColor" type="button" class="btn btn-success">
-              Color
-            </button>
-          </div>
-          <div class="fontBox box4">
-            <button id="largeFont" type="button" class="btn btn-primary">
-              A
-            </button>
-          </div>
-          <div class="fontBox boxRandom">
-            <button id="smallFont" type="button" class="btn btn-primary">
-              a
-            </button>
-          </div>
+        <div class="fontBox box1">
+          <button id="darkTheme" type="button" class="btn btn-dark btn-md">
+            Dark
+          </button>
         </div>
-        <div class="textContainer">
-          <div id="textBox">
-            <h6>Start typing and check out cool tools</h6>
-            <form id="myform">
-              <textarea
-                class="entry"
-                id="textCounter"
-                placeholder="Enter your text..."
-                rows="10"
-              ></textarea>
-              <button id="myreset" class="btn btn-info" type="reset">
-                Clean
-              </button>
-            </form>
-          </div>
-          <div class="info-counters">
-            <ul>
-              <li id="result-characters">
-                <strong>Characters</strong>
-                <div id="result-characters-num">0</div>
-              </li>
-              <li id="result-words">
-                <strong>Words</strong>
-                <div id="result-words-num">0</div>
-              </li>
-              <li id="result-spaces">
-                <strong>Space</strong>
-                <div id="result-spaces-num">0</div>
-              </li>
-            </ul>
-            <div class="adUnit"></div>
-          </div>
+        <div id="lightTheme" class="fontBox box2">
+          <button type="button" class="btn btn-light btn-md">Light</button>
+        </div>
+        <div class="fontBox box3">
+          <button id="fontColor" type="button" class="btn btn-success btn-md">
+            Color
+          </button>
+        </div>
+        <div class="fontBox box4">
+          <button id="largeFont" type="button" class="btn btn-primary btn-md">
+            A
+          </button>
+        </div>
+        <div class="fontBox boxRandom">
+          <button id="smallFont" type="button" class="btn btn-primary btn-md">
+            a
+          </button>
         </div>
       </div>
-    </main>
-    <footer></footer>
+      <div id="textBox">
+        <h6>Start typing and check out cool tools</h6>
+        <form id="myform">
+          <textarea
+            type="text"
+            class="entry"
+            id="textCounter"
+            placeholder="Please enter your text..."
+            rows="10"
+          ></textarea>
+          <div class="search">
+            <div class="info-counters d-flex justify-content-center">
+              <ul>
+                <li id="result-characters">
+                  <strong>Characters</strong>
+                  <div id="result-characters-num">0</div>
+                </li>
+                <li id="result-words">
+                  <strong>Words</strong>
+                  <div id="result-words-num">0</div>
+                </li>
+                <li id="result-spaces">
+                  <strong>Space</strong>
+                  <div id="result-spaces-num">0</div>
+                </li>
+              </ul>
+              <div class="adUnit"></div>
+            </div>
+            <div>
+              <input type="text" id="searchInput" class="form-control-sm" />
+              <button
+                type="button"
+                class="btn btn-sm btn-primary"
+                id="searchBtn"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="pop-outer">
+      <div class="pop-inner">
+        <button
+          id="close"
+          type="button"
+          class="btn btn-dark btn-sm float-right"
+        >
+          Close</button
+        ><br />
+        <h3>Greetings from Digi-Text</h3>
+        <p class="lead">
+          This is a character/word/space counter with practical tools. I hope
+          you find it useful and enjoy your time...
+        </p>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

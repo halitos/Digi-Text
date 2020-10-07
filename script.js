@@ -1,98 +1,123 @@
+const textArea = $(".entry");
+
 // ---------------Larger Font ---------------
 
-const textArea = document.querySelector(".entry");
-const LargeFontBtn = document.querySelector("#largeFont");
-
-function lrgFont() {
-  textArea.style.fontSize = "1.5em";
-}
-
-LargeFontBtn.addEventListener("click", lrgFont);
+$("#largeFont").click(function () {
+  textArea.css("fontSize", "1.5em");
+});
 
 //--------------------Smaller Font---------------
 
-const SmallFontBtn = document.querySelector("#smallFont");
+$("#smallFont").click(SmlFont);
 
 function SmlFont() {
-  textArea.style.fontSize = "0.8em";
+  textArea.css("fontSize", "0.8em");
 }
-
-SmallFontBtn.addEventListener("click", SmlFont);
 
 //--------------------Random Font Color--------------------
 
-const colorBtn = document.getElementById("fontColor");
+$("#fontColor").on("click", changeColor);
 
-function buttonColors() {
-  textArea.style.color =
-    "rgb(" +
-    Math.floor(Math.random() * 256) +
-    "," +
-    Math.floor(Math.random() * 256) +
-    "," +
-    Math.floor(Math.random() * 256) +
-    ")";
+function changeColor() {
+  const randomColors = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  textArea.css("color", randomColors);
 }
-
-colorBtn.addEventListener("click", buttonColors);
 
 //-------------------Dark/Light Themes-----------------
 
-const darkButton = document.getElementById("darkTheme");
+$("#darkTheme").on("click", makeDark);
 
 function makeDark() {
-  textArea.style.backgroundColor = "black";
-  textArea.style.color = "white";
+  textArea.css({ backgroundColor: "black", color: "white" });
 }
 
-darkButton.addEventListener("click", makeDark);
+$("#lightTheme").on("click", makeLight);
 
-const lightButtton = document.getElementById("lightTheme");
 function makeLight() {
-  textArea.style.backgroundColor = "white";
-  textArea.style.color = "black";
+  textArea.css({ backgroundColor: "white", color: "black" });
 }
-lightButtton.addEventListener("click", makeLight);
 
 //------------------Character counter--------------------
 
-const counter = document.getElementById("result-characters-num");
+const counter = $("#result-characters-num");
 
 const badWords = ["bug", "nested", "algorithm", "fouc", "error"];
 
+textArea.on("input", textCounter);
+
 function textCounter() {
-  counter.innerHTML = textArea.value.length;
+  counter.text(textArea.val().length);
   badWords.forEach(function (word) {
-    if (textArea.value.includes(word)) {
+    if (textArea.val().includes(word)) {
       alert("NOOO!!!");
     }
   });
 }
-textArea.addEventListener("keyup", textCounter);
 
 //---------------------Word counter---------------------
 
-let counter2 = document.getElementById("result-words-num");
+const counter2 = $("#result-words-num");
+
+textArea.on("input", wordCounter);
 
 function wordCounter() {
-  counter2.innerHTML = textArea.value.split(" ").length;
+  counter2.text(textArea.val().split(" ").length);
 }
-textArea.addEventListener("keyup", wordCounter);
 
-//--------------------Space counter (need to sort out)-----------------------
+//--------------------Space counter -----------------------
 
-let counter3 = document.getElementById("result-spaces-num");
+let counter3 = $("#result-spaces-num");
+
+textArea.on("input", spaceCounter);
 
 function spaceCounter() {
   let regexp = /\s/g;
-  counter3.innerText = textArea.value.match(regexp).length;
+  counter3.text(textArea.val().match(regexp).length);
 }
-textArea.addEventListener("keyup", spaceCounter);
 
 //-------------------------------Paste----------------------------------------
 
-textArea.addEventListener("paste", alertPaste);
+textArea.on("paste", alertPaste);
 
 function alertPaste() {
   alert("Please continue typing to see the value of pasted text");
+}
+
+//-------------search function trials-------------------
+
+$("#searchBtn").click(searchText);
+
+function searchText(e) {
+  let searchTerm = $("#searchInput").val().toLowerCase();
+  if (searchTerm) {
+    if (textArea.val().toLowerCase().indexOf(searchTerm) != -1) {
+      alert("String Found. Search Complete");
+      e.preventDefault();
+    } else {
+      alert("No such string found in Text Area");
+      e.preventDefault();
+    }
+  } else {
+    alert("Please enter a character to search");
+  }
+}
+
+//---------------Pop-Up---------------------
+
+$("#about").on("click", function () {
+  $(".pop-outer").fadeIn("slow");
+});
+
+$("#close").on("click", function () {
+  $(".pop-outer").fadeOut("slow");
+});
+
+//--------------Reset Btn---------------------
+
+const resetBtn = $("#myreset");
+
+resetBtn.on("click", resetCounters);
+
+function resetCounters() {
+  window.location.reload();
 }
